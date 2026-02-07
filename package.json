@@ -1,0 +1,49 @@
+{
+  "name": "butler-landing-page",
+  "version": "1.0.0",
+  "description": "Professional landing page for Butler - AI Agent Treasury & Orchestration",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "serve": "npx serve . -p 8000",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "gh-pages -d .",
+    "lint": "echo 'Add linting here if needed'",
+    "format": "echo 'Add formatting here if needed'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zoro-skills/butler-landing.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "treasury",
+    "usdc",
+    "hackathon",
+    "circle",
+    "openclaw",
+    "butler",
+    "cryptocurrency",
+    "blockchain"
+  ],
+  "author": "Tokisaki Kurumi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zoro-skills/butler-landing/issues"
+  },
+  "homepage": "https://butler-ai.github.io",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "gh-pages": "^6.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
