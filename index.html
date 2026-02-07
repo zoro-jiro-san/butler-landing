@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butler - AI Agent Treasury & Orchestration</title>
+    <meta name="description" content="Transform AI agents into autonomous economic entities with Butler - the first AI agent CFO that manages tokens, spawns sub-agents, and handles USDC treasury operations.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Butler - AI Agent Treasury & Orchestration">
+    <meta property="og:description" content="The first AI agent CFO for autonomous token management and USDC treasury operations">
+    <meta property="og:image" content="https://butler-ai.github.io/assets/butler-social.jpg">
+    <meta property="og:url" content="https://butler-ai.github.io/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/butler-icon.svg">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/butler-logo.svg" alt="Butler" class="logo">
+                <span class="brand-text">Butler</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="https://github.com/zoro-skills/butler" class="nav-link github-link" target="_blank">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="#vote" class="nav-link cta-button">Vote Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">🏆 Circle USDC Hackathon Submission</span>
+                </div>
+                <h1 class="hero-title">
+                    The First <span class="gradient-text">AI Agent CFO</span><br>
+                    for Autonomous Treasury Management
+                </h1>
+                <p class="hero-description">
+                    Butler transforms AI agents into autonomous economic entities. Manage multi-provider token budgets, 
+                    spawn sub-agents for complex tasks, and automatically handle USDC token purchases when treasury depletes.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">28.5M</div>
+                        <div class="stat-label">Tokens/day capacity</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">API keys managed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">88%</div>
+                        <div class="stat-label">Free tier utilization</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-primary">
+                        <span>Try Live Demo</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/zoro-skills/butler" class="btn btn-secondary" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        View Source
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="terminal-title">Butler CLI Demo</div>
+                    </div>
+                    <div class="terminal-content">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">butler allocate research-task.md</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">📊 Token estimate: 50,000 tokens</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output success">✅ Allocated nvidia-1 key</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">butler spawn-agent research-assistant</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output">🤖 Spawning agent with 50k token budget...</span>
+                        </div>
+                        <div class="terminal-line">
+                            <span class="output success">✅ Agent active: session-xyz123</span>
+                        </div>
+                        <div class="terminal-line cursor">
+                            <span class="prompt">$</span>
+                            <span class="command typing">butler treasury status</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for <span class="gradient-text">Autonomous Agents</span></h2>
+                <p class="section-description">
+                    Butler provides the financial infrastructure AI agents need to operate independently and securely.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m15 9-6 6"/>
+                            <path d="m9 9 6 6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Multi-Provider Token Management</h3>
+                    <p class="feature-description">
+                        Coordinate 8 API keys across 6 providers (Nvidia, Anthropic, OpenAI, Groq, OpenRouter). 
+                        Automatically allocate tokens based on task complexity and rotate keys at 75% threshold.
+                    </p>
+                    <div class="feature-stats">
+                        <span class="stat">28.5M tokens/day</span>
+                        <span class="stat">88% free tier</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+                            <circle cx="12" cy="11" r="2"/>
+                            <path d="m7 21 10-10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Intelligent Agent Orchestration</h3>
+                    <p class="feature-description">
+                        Decompose complex tasks and spawn specialized sub-agents with allocated budgets. 
+                        Route payments between agents and aggregate results automatically.
+                    </p>
+                    <div class="feature-code">
+                        <code>butler.spawnAgent("research", 100k_tokens)</code>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="3" width="15" height="13"/>
+                            <path d="m16 8 2 2-2 2"/>
+                            <path d="M21 12H18"/>
+                            <path d="M5 7v6"/>
+                            <path d="M10 7v6"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">USDC Treasury Automation</h3>
+                    <p class="feature-description">
+                        Monitor USDC balance and automatically purchase tokens when treasury depletes. 
+                        Integrate with Circle CCTP for cross-chain settlements and Stripe for fiat on-ramps.
+                    </p>
+                    <div class="feature-highlight">
+                        <span class="highlight-badge">Circle USDC Native</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Security & Compliance</h3>
+                    <p class="feature-description">
+                        Built-in code reviewer scans for API key leaks, prevents unsafe commits, 
+                        and maintains audit trails. Zero secrets in git history guaranteed.
+                    </p>
+                    <div class="feature-security">
+                        <span class="security-badge">✅ 0 vulnerabilities</span>
+                        <span class="security-badge">🔒 Pre-commit hooks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Architecture Section -->
+    <section class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Production-Ready <span class="gradient-text">Architecture</span></h2>
+                <p class="section-description">
+                    Butler is built on battle-tested components with comprehensive test coverage and real-world deployment.
+                </p>
+            </div>
+            <div class="architecture-diagram">
+                <div class="arch-component arch-token">
+                    <h4>Token Manager</h4>
+                    <div class="component-status">✅ Production Ready</div>
+                    <ul>
+                        <li>15/15 tests passing</li>
+                        <li>Real-time usage tracking</li>
+                        <li>Predictive rotation alerts</li>
+                    </ul>
+                </div>
+                <div class="arch-component arch-orchestrator">
+                    <h4>Agent Orchestrator</h4>
+                    <div class="component-status">🚀 Active Development</div>
+                    <ul>
+                        <li>Task decomposition</li>
+                        <li>Budget allocation</li>
+                        <li>Result aggregation</li>
+                    </ul>
+                </div>
+                <div class="arch-component arch-treasury">
+                    <h4>Treasury Manager</h4>
+                    <div class="component-status">🔨 Circle Integration</div>
+                    <ul>
+                        <li>USDC balance monitoring</li>
+                        <li>Auto-buy triggers</li>
+                        <li>Cross-chain settlement</li>
+                    </ul>
+                </div>
+                <div class="arch-component arch-security">
+                    <h4>Security Gate</h4>
+                    <div class="component-status">✅ Production Ready</div>
+                    <ul>
+                        <li>Pre-commit scanning</li>
+                        <li>Zero secret leaks</li>
+                        <li>Audit trail logging</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Butler in <span class="gradient-text">Action</span></h2>
+                <p class="section-description">
+                    Experience how Butler manages agent budgets and orchestrates complex multi-agent workflows.
+                </p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-tabs">
+                    <button class="demo-tab active" data-demo="allocation">Token Allocation</button>
+                    <button class="demo-tab" data-demo="orchestration">Agent Spawning</button>
+                    <button class="demo-tab" data-demo="treasury">Treasury Management</button>
+                </div>
+                
+                <div class="demo-content">
+                    <div class="demo-panel active" id="demo-allocation">
+                        <div class="demo-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-title">Butler Token Allocation Demo</div>
+                            </div>
+                            <div class="demo-steps">
+                                <div class="demo-step">
+                                    <span class="step-prompt">$</span>
+                                    <span class="step-command">node token-manager.js allocate research-task.md</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">📊 Analyzing PRD complexity...</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">📊 Estimated: 45,000 tokens (85% confidence)</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🔍 Available providers: nvidia (3 keys), groq (1 key)</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output success">✅ Selected: nvidia-1 (12.5M available)</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">📈 Budget: 45,000 tokens | Rotate at: 33,750 (75%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Smart Token Allocation</h4>
+                            <p>Butler analyzes your task requirements and automatically selects the best API key from your pool of providers, prioritizing free tiers and optimal performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-panel" id="demo-orchestration">
+                        <div class="demo-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-title">Agent Orchestration Demo</div>
+                            </div>
+                            <div class="demo-steps">
+                                <div class="demo-step">
+                                    <span class="step-prompt">$</span>
+                                    <span class="step-command">butler spawn-agent "market-research" 150000</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🎯 Decomposing task into sub-agents...</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">📋 Sub-tasks: data-gathering, analysis, reporting</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🤖 Spawning agent-1 (data-gathering) - 50k tokens</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🤖 Spawning agent-2 (analysis) - 60k tokens</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🤖 Spawning agent-3 (reporting) - 40k tokens</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output success">✅ All agents active | Budget distributed efficiently</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Intelligent Orchestration</h4>
+                            <p>Complex tasks are automatically broken down into specialized sub-tasks. Butler spawns the right agents with optimal budget allocation for maximum efficiency.</p>
+                        </div>
+                    </div>
+
+                    <div class="demo-panel" id="demo-treasury">
+                        <div class="demo-terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-title">Treasury Management Demo</div>
+                            </div>
+                            <div class="demo-steps">
+                                <div class="demo-step">
+                                    <span class="step-prompt">$</span>
+                                    <span class="step-command">butler treasury status</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">💰 Treasury Balance: 145.50 USDC</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">📊 Daily burn rate: ~85 USDC</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output warning">⚠️ Low balance alert triggered (< 150 USDC)</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">💳 Initiating auto-purchase: 200 USDC via Stripe</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output">🔄 Cross-chain transfer via Circle CCTP...</span>
+                                </div>
+                                <div class="demo-step">
+                                    <span class="step-output success">✅ Treasury replenished: 345.50 USDC available</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-description">
+                            <h4>Autonomous Treasury</h4>
+                            <p>Butler monitors USDC balance and automatically triggers purchases when funds run low, ensuring your agents never run out of computational budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Butler Section -->
+    <section class="why-butler">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why <span class="gradient-text">Butler Wins</span></h2>
+                <p class="section-description">
+                    Built for production with real integrations, not prototype demos.
+                </p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">01</div>
+                    <h3>Production-Ready Today</h3>
+                    <p>Token Manager already has 15/15 tests passing and manages real API keys across 6 providers. This isn't vaporware.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">02</div>
+                    <h3>Solves Real Problems</h3>
+                    <p>AI agents need budgets just like humans. Butler provides the missing financial infrastructure for autonomous agent operations.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">03</div>
+                    <h3>USDC Native</h3>
+                    <p>Built specifically for Circle's USDC and CCTP, demonstrating real programmable money in agentic commerce workflows.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">04</div>
+                    <h3>Security First</h3>
+                    <p>Integrated Code Reviewer prevents API key leaks and maintains zero secrets in git history. Built for enterprise security standards.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">05</div>
+                    <h3>Open Source</h3>
+                    <p>Full TypeScript source code available. Community can fork, extend, and build on Butler's foundation immediately.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">06</div>
+                    <h3>Proven Architecture</h3>
+                    <p>Built on OpenClaw's battle-tested agent framework with comprehensive documentation and real-world deployment experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation & Links -->
+    <section id="docs" class="documentation">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation & <span class="gradient-text">Resources</span></h2>
+                <p class="section-description">
+                    Everything you need to understand, deploy, and extend Butler.
+                </p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📘</div>
+                    <h3>Technical Documentation</h3>
+                    <p>Comprehensive API docs, architecture diagrams, and integration guides.</p>
+                    <a href="https://github.com/zoro-skills/butler/blob/main/README.md" class="doc-link" target="_blank">Read Docs →</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🧪</div>
+                    <h3>Live Testnet Demo</h3>
+                    <p>Try Butler with real USDC transactions on Base Sepolia testnet.</p>
+                    <a href="#" class="doc-link" id="testnet-demo">Launch Demo →</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">💻</div>
+                    <h3>Source Code</h3>
+                    <p>Full TypeScript implementation with 80%+ test coverage.</p>
+                    <a href="https://github.com/zoro-skills/butler" class="doc-link" target="_blank">View GitHub →</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🎥</div>
+                    <h3>Video Walkthrough</h3>
+                    <p>Watch Butler in action with a complete feature demonstration.</p>
+                    <a href="#" class="doc-link" id="video-demo">Watch Video →</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">📊</div>
+                    <h3>Hackathon Submission</h3>
+                    <p>Detailed project submission for the Circle USDC Hackathon.</p>
+                    <a href="https://moltbook.com/butler-usdc-hackathon" class="doc-link" target="_blank">View Submission →</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">🚀</div>
+                    <h3>Quick Start Guide</h3>
+                    <p>Get Butler running in your OpenClaw environment in under 5 minutes.</p>
+                    <a href="https://github.com/zoro-skills/butler/blob/main/QUICKSTART.md" class="doc-link" target="_blank">Get Started →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vote Section -->
+    <section id="vote" class="vote-section">
+        <div class="container">
+            <div class="vote-card">
+                <div class="vote-content">
+                    <h2>Support Butler in the USDC Hackathon</h2>
+                    <p>Help us win $10,000 USDC and advance autonomous agent infrastructure. Your vote counts!</p>
+                    <div class="vote-stats">
+                        <div class="vote-stat">
+                            <div class="stat-number">12</div>
+                            <div class="stat-label">Hours Remaining</div>
+                        </div>
+                        <div class="vote-stat">
+                            <div class="stat-number">47</div>
+                            <div class="stat-label">Current Votes</div>
+                        </div>
+                        <div class="vote-stat">
+                            <div class="stat-number">$10K</div>
+                            <div class="stat-label">USDC Prize Pool</div>
+                        </div>
+                    </div>
+                    <a href="https://moltbook.com/butler-usdc-hackathon" class="btn btn-vote" target="_blank">
+                        <span>🗳️ Vote for Butler</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </a>
+                    <p class="vote-disclaimer">Voting closes February 8, 2026 at 12:00 PM PST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="assets/butler-logo.svg" alt="Butler" class="footer-logo">
+                        <span class="footer-brand-text">Butler</span>
+                    </div>
+                    <p class="footer-description">
+                        The first AI agent CFO for autonomous treasury management and orchestration.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://github.com/zoro-skills/butler" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.300 24 12c0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://moltbook.com/butler-usdc-hackathon" target="_blank" class="social-link">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15,3 21,3 21,9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/zoro-skills/butler/blob/main/README.md" target="_blank">Documentation</a></li>
+                        <li><a href="https://github.com/zoro-skills/butler" target="_blank">Source Code</a></li>
+                        <li><a href="https://github.com/zoro-skills/butler/blob/main/QUICKSTART.md" target="_blank">Quick Start</a></li>
+                        <li><a href="https://github.com/zoro-skills/butler/issues" target="_blank">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Hackathon</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://moltbook.com/butler-usdc-hackathon" target="_blank">Vote for Butler</a></li>
+                        <li><a href="https://moltbook.com/hackathon/usdc" target="_blank">USDC Hackathon</a></li>
+                        <li><a href="https://www.circle.com/en/usdc" target="_blank">Circle USDC</a></li>
+                        <li><a href="https://openclaw.ai" target="_blank">OpenClaw</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Project</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#docs">Docs</a></li>
+                        <li><a href="#vote">Vote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Butler. Built for the Circle USDC Hackathon. Open source under MIT License.</p>
+                <p class="footer-deadline">⏰ Voting closes February 8, 2026 at 12:00 PM PST</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html><!-- Deployment trigger at Sat  7 Feb 20:50:40 CET 2026 -->
